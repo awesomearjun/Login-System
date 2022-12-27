@@ -11,7 +11,8 @@ using std::endl;
 /* Jump to main function */
 
 /* params: loginMode (register or login */
-void login(const char loginMode) {
+void login(const char loginMode)
+{
 	/* Switch for loginMode = 1 or loginMode = 2 */
 	switch(loginMode) {
 		/* loginMode = 1? */
@@ -66,22 +67,28 @@ void login(const char loginMode) {
 				cin >> uiPassword;
 
 				/* Loop over usernames and set username to fUsername */
-				while(std::getline(nameDB, fUsername)) {
+				while(std::getline(nameDB, fUsername))
+				{
 					/* Sets username to correct/incorrect */
-					if(uiUsername == fUsername) {
+					if(uiUsername == fUsername) 
+					{
 						usernameCorrect = true;	
 						break;
-					} else {
+					} else
+					{
 						usernameCorrect = false;	
 					}
 				}
 
 				/* Same here */
-				while(std::getline(passDB, fPassword)) {
-					if(uiPassword == fPassword) {
+				while(std::getline(passDB, fPassword))
+				{
+					if(uiPassword == fPassword)
+					{
 						passwordCorrect = true;	
 						break;
-					} else {
+					}
+					else {
 						passwordCorrect = false;	
 					}
 				}
@@ -90,9 +97,11 @@ void login(const char loginMode) {
 				If username and password are correct, say hi to user,
 				else, no.
 				*/
-				if(usernameCorrect && passwordCorrect) {
+				if(usernameCorrect && passwordCorrect)
+				{
 					cout << "Hello, " << uiUsername << "!" << endl;	
-				} else  {
+				} else 
+				{
 					cout << "I couldn't find that account." << endl;
 				}
 			}
@@ -100,7 +109,8 @@ void login(const char loginMode) {
 	}
 }
 
-int main() {
+int main()
+{
 	/* New variable mode */
 	char mode; 
 	
